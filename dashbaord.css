@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+    background-color: #1a1a1a; /* Dark background */
+    color: white;
+    font-family: Arial, sans-serif;
+    padding-top: 30px;
+    background-image: url("images/pexels-victorfreitas-841130.jpg");
+    background-position: 0%;
+    background-size:cover
+}
+
+.container {
+    max-width: 900px;
+}
+
+.card {
+    background-color: #333;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.card-header {
+    background-color: #e60000; 
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+}
+
+.card-body {
+    background-color: #444;
+    padding: 20px;
+}
+
+/* Form Controls */
+.form-control {
+    background-color: #555;
+    color: white;
+    border: 1px solid #777;
+}
+
+.form-control:focus {
+    background-color: #777;
+    color: white;
+    border-color: #e60000;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #e60000;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    background-color: #b20000;
+}
+
+.btn-success {
+    background-color: #1a9d4f; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.btn-success:hover {
+    background-color: #148537;
+}
+
+/* Table */
+.table {
+    color: white;
+    background-color: #333;
+}
+
+.table th, .table td {
+    border-color: #555;
+    padding: 10px;
+}
+
+
+h1 {
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.workout-log-table {
+    margin-top: 20px;
+}
+
+.workout-log-table td {
+    padding: 10px;
+}
+
+.result-card p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="number"], select {
+    background-color: #555;
+    color: white;
+    border: 1px solid #777;
+    padding: 10px;
+    font-size: 16px;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+    background-color: #777;
+    color: white;
+    border-color: #e60000;
+}
+
+select {
+    background-color: #555;
+    border: 1px solid #777;
+    padding: 10px;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+
+#user-info-card {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

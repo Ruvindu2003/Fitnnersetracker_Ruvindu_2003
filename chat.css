@@ -1,0 +1,206 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("images/pexels-victorfreitas-841130.jpg");
+    background-position: 0%;
+    background-size:cover;
+  }
+  
+  /* Main Chat Container */
+  .msger {
+    width: 100%;
+    max-width: 600px;
+    background: linear-gradient(135deg, #1c1c1c, #2b2b2b);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header */
+  .msger-header {
+    background-color: #1a1a1a;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .msger-header-title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .msger-header-title img {
+    width: 120px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .msger-header-title select {
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .msger-header-options {
+    font-size: 20px;
+    color: #ff4d4d;
+    cursor: pointer;
+  }
+  
+  /* Chat Area */
+  .msger-chat {
+    padding: 20px;
+    overflow-y: auto;
+    height: 400px;
+    background-color: #222;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .msg {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .left-msg .msg-bubble {
+    background-color: #333;
+    color: #fff;
+    border-radius: 12px;
+    padding: 12px 18px;
+    position: relative;
+    max-width: 75%;
+    margin-left: 20px;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .right-msg .msg-bubble {
+    background-color: #ff4d4d;
+    color: #fff;
+    border-radius: 12px;
+    padding: 12px 18px;
+    position: relative;
+    max-width: 75%;
+    margin-right: 20px;
+    font-size: 16px;
+    text-align: right;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .msg-info {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .msg-info-name {
+    font-weight: bold;
+  }
+  
+  .msg-text {
+    font-size: 16px;
+  }
+  
+  .left-msg .msg-bubble::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    border: 10px solid transparent;
+    border-right-color: #333;
+  }
+  
+  .right-msg .msg-bubble::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    border: 10px solid transparent;
+    border-left-color: #ff4d4d;
+  }
+  
+  /* Input Area */
+  .msger-inputarea {
+    display: flex;
+    background-color: #333;
+    padding: 12px;
+    align-items: center;
+    border-top: 1px solid #444;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .msger-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    margin-right: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .msger-send-btn {
+    background-color: #ff4d4d;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .msger-send-btn:hover {
+    background-color: #e60000;
+    transform: scale(1.05);
+  }
+  
+  .msger-send-btn:active {
+    background-color: #b30000;
+  }
+  
+  .msger-inputarea input:focus,
+  .msger-inputarea button:focus {
+    outline: none;
+    border: 1px solid #ff4d4d;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .msger-chat .msg {
+    animation: fadeIn 0.5s ease-out;
+  }
+  

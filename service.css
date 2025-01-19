@@ -1,0 +1,81 @@
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #ff0000; /* Red heading */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Card Styles */
+.card {
+    width: 320px;
+    background: #1e1e1e; /* Dark gray card */
+    border: 2px solid #ff0000; /* Red border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3); /* Red glow effect */
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 0, 0, 0.6);
+}
+
+/* Image */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #ff0000;
+}
+
+/* Exercise Name */
+.card h3 {
+    margin: 15px 0;
+    font-size: 20px;
+    color: #ff0000;
+}
+
+/* Instructions */
+.instructions {
+    text-align: left;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+.instructions strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #ff4444; /* Lighter red */
+}
+
+.instructions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.instructions li {
+    background: rgba(255, 0, 0, 0.2);
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+}

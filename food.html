@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Tracker</title>
+    <link rel="stylesheet" href="food.css">
+    
+</head>
+<body>
+
+<div class="container">
+    <h1>Food Intake Tracker</h1>
+    
+  
+    <div class="form-group">
+        <label for="userName">Name:</label>
+        <input type="text" id="userName" placeholder="Enter your name">
+    </div>
+    <div class="form-group">
+        <label for="userAge">Age:</label>
+        <input type="number" id="userAge" placeholder="Enter your age">
+    </div>
+
+
+    <div class="form-group">
+        <label for="foodItem">Food Item:</label>
+        <input type="text" id="foodItem" placeholder="Enter food item (e.g., Apple)">
+    </div>
+    <div class="form-group">
+        <label for="foodCalories">Calories:</label>
+        <input type="number" id="foodCalories" placeholder="Enter calories for the food item">
+    </div>
+    <div class="form-group">
+        <label for="foodFat">Fat (g):</label>
+        <input type="number" id="foodFat" placeholder="Enter fat in grams">
+    </div>
+    <div class="form-group">
+        <label for="foodCarbs">Carbs (g):</label>
+        <input type="number" id="foodCarbs" placeholder="Enter carbs in grams">
+    </div>
+
+    <div class="form-group">
+        <button onclick="addFood()">Add Food</button>
+    </div>
+
+    <!-- Bar Chart Container -->
+    <div id="chart-container">
+        <canvas id="foodChart"></canvas>
+    </div>
+</div>
+
+<!-- Include Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="food.js">
+   
+</script>
+
+</body>
+</html>

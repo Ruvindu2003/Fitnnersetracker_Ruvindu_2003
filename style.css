@@ -1,0 +1,184 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f3f4f7;
+    color: #333;
+    line-height: 1.6;
+    left: auto;
+    
+}
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1; 
+}
+
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #111;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header a.logo {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ff6a3d;
+}
+
+.top-btn .nav-btn {
+    background: linear-gradient(135deg, #ff6a3d, #e5552b);
+    color: white;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.top-btn .nav-btn:hover {
+    background: linear-gradient(135deg, #e5552b, #ff6a3d);
+    transform: scale(1.05);
+}
+
+.Home {
+    height: 100vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.Home-content {
+    color: white;
+    padding: 20px;
+    max-width: 800px;
+}
+
+.Home-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #ff6a3d, #e5552b);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.Home-content p {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    color: #222;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+}
+
+.Home-content p::first-letter {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff6a3d, #e5552b);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.btn_ {
+    background: linear-gradient(135deg, #ff6a3d, #e5552b);
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn_:hover {
+    background: linear-gradient(135deg, #e5552b, #ff6a3d);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    .Home-content h1 {
+        font-size: 2.5rem;
+    }
+}
+.join {
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF; /* Button color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #0056b3; /* Hover effect */
+    color: white;
+}
+
+.nav-btn:active {
+    background-color: #004085; /* Active state */
+}
+
+.join:focus {
+    outline: none;
+    box-shadow: 0 0 3px 2px rgba(0, 123, 255, 0.5);
+}
