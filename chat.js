@@ -88,27 +88,52 @@ function loadChatBox(){
 }
 
 
-function response_by_gemini(){
+function response_by_gemini() {
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     
     const raw = JSON.stringify({
-      "contents": [
-        {
-          "parts": [
+        "contents": [
             {
-              "text": Latest_massage
+                "parts": [
+                    {
+                        "text": Latest_massage
+                    }
+                ]
             }
-          ]
-        }
-      ]
+        ]
     });
-    
+
     const requestOptions = {
-      method: "POST",
-      headers: myHeaders,
-      body: raw,
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
     };
+
+    fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyBzJOpMCFmVJ8RpdUPa-ikItmMQfSW0evc", requestOptions)
+        .then((response) => response.json())
+        .then((result) => {
+            console.log(result.candidates[0].content.parts[0].text);
+            gemini_response = result.candidates[0].content.parts[0].text;
+
+            msgHTML += 
+                `<div class="msg left-msg">
+                    <div class="msg-bubble">
+                        <div class="msg-info">
+                            <div class="msg-info-name">GEMINI</div>
+                        </div>
+                        <div class="msg-text">${md.render(gemini_response)}</div>
+                    </div>
+                </div>`;
+
+            msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+
+            responsiveVoice.speak(gemini_response, "UK English Male");
+
+        })
+        .catch((error) => console.error(error));
+}
+
 
 
    
@@ -137,5 +162,4 @@ function response_by_gemini(){
 
       })
       .catch((error) => console.error(error));
-}
 

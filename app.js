@@ -2,6 +2,8 @@ fetch("https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/dist/exer
 
 .then(response => response.json())
 .then(data => {
+    console.log(data);
+    
     const container = document.getElementById("exerciseContainer");
 
     data.forEach(exercise => {

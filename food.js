@@ -1,3 +1,4 @@
+
 let foodData = [];  // To hold the food data for plotting
 let foodLabels = [];  // Labels for bar chart (food items)
 
@@ -37,7 +38,7 @@ function updateChart() {
     const foodChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: foodLabels,  // Food items
+            labels: foodLabels, 
             datasets: [{
                 label: 'Calories',
                 data: caloriesData,
