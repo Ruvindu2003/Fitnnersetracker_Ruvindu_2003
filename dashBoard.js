@@ -12,7 +12,7 @@ document.getElementById("user-details-form").addEventListener("submit", function
     document.getElementById("user-age-display").textContent = `Age: ${age}`;
     document.getElementById("user-gender-display").textContent = `Gender: ${gender}`;
 
-    // Calculate BMI
+  
     const bmi = (weight / Math.pow(height / 100, 2)).toFixed(2);
     document.getElementById("user-bmi-display").textContent = `Your BMI: ${bmi}`;
 
@@ -24,18 +24,17 @@ document.getElementById("user-details-form").addEventListener("submit", function
         bmr = 10 * weight + 6.25 * height - 5 * age - 161;
     }
 
-    const calorieIntake = (bmr * 1.55).toFixed(2); // Assuming moderate activity level
+    const calorieIntake = (bmr * 1.55).toFixed(2); 
     document.getElementById("user-calories-display").textContent = `Your Daily Calorie Intake: ${calorieIntake} kcal`;
 
     // Show the user info card
     document.getElementById("user-info-card").style.display = "block";
 });
 
-// Handle workout log form submission
 document.getElementById("workout-log-form").addEventListener("submit", function(e) {
     e.preventDefault();
 
-    // Get workout log details
+   
     const workoutType = document.getElementById("workout-type").value;
     const workoutDuration = parseInt(document.getElementById("workout-duration").value);
     const workoutCalories = parseInt(document.getElementById("workout-calories").value);
