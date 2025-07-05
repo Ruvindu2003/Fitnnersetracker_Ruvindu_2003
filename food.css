@@ -130,13 +130,12 @@ Header {
 }
 
 .navbar li a:hover {
-    color: #ccc; /* Light gray on hover */
+    color: #ccc;
 }
 
-/* Button styling */
 .nav-btn, .top-btn a {
-    background-color: white; /* White button */
-    color: #000; /* Black text */
+    background-color: white; 
+    color: #000; 
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -145,11 +144,11 @@ Header {
 }
 
 .nav-btn:hover, .top-btn a:hover {
-    background-color: #f0f0f0; /* Slightly darker white on hover */
+    background-color: #f0f0f0; 
     transform: translateY(-2px);
 }
 
-/* Menu icon (assuming this is for mobile) */
+
 #menu_icon {
     color: white;
     font-size: 1.5rem;

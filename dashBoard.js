@@ -45,8 +45,25 @@ document.getElementById("workout-log-form").addEventListener("submit", function(
     row.innerHTML = `
         <td>${workoutType}</td>
         <td>${workoutDuration}</td>
-        <td>${workoutCalories}</td>
     `;
+
+    // Save to local storage
+    const workoutLog = JSON.parse(localStorage.getItem("workoutLog")) || [];
+    workoutLog.push({ workoutType, workoutDuration, workoutCalories });
+    localStorage.setItem("workoutLog", JSON.stringify(workoutLog));
+
+    // Update the table with all saved data
+    workoutLogTable.innerHTML = ""; // Clear the table
+    workoutLog.forEach(log => {
+        const row = workoutLogTable.insertRow();
+        row.innerHTML = `
+            <td>${log.workoutType}</td>
+            <td>${log.workoutDuration}</td>
+            <td>${log.workoutCalories}</td>  
+             <td>${log.workoutCalories * 0.0175 * log.workoutDuration}</td>
+    
+        `;
+    });
 
     // Clear form inputs
     document.getElementById("workout-log-form").reset();
